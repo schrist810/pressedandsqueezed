@@ -46,6 +46,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -664,12 +670,71 @@ Masthead
 	display: none;
 }
 
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear:both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+
+footer {
+	font-size: .8em;
+	border-top: 1px dotted #ccc;
+	margin-top: 2em;
+	padding-top: 2em;
+	padding-bottom: 5em;
+}
+
+footer h1 {
+	font-family: merriweather, serif;
+	font-weight: 700;
+	font-size: 1em;
+	text-align: left;
+	margin-top: .67em;
+	margin-bottom: .67em;
+}
+
+footer p {
+	line-height: .5;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+/*--------------------------------------------------------------
+Layout
+--------------------------------------------------------------*/
+.content-area {
+	float: left;
+}
+
+.widget-area {
+	float: left;
+	width: 20%;
+	padding-left: 2em;
+}
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+.site {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .sticky {
 	display: block;
 }
